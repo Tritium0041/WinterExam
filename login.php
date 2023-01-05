@@ -1,6 +1,6 @@
 <?PHP
-header("Content-Type: text/html; charset=utf8");
 session_start();
+header("Content-Type: text/html; charset=utf8");
 if (!isset($_POST["submit"])) {
     exit("错误执行");
 } //检测是否有submit操作 
