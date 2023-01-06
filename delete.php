@@ -1,5 +1,6 @@
 <?php
 session_start();
+error_log(0);
 include("connect.php");
 if (!isset($_SESSION["isLogin"])) {
     echo "未经授权<br /><a href=\"index.html\">回到首页</a><br />";
