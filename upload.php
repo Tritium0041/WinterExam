@@ -23,10 +23,11 @@ if (isset($_SESSION["isLogin"]) && $_SESSION["isLogin"] == true && isset($_FILES
         if (!$rows1) {
             mysqli_query($con, "insert into $name_base64 (hash_sha256,filename) values ('$hash','$name')");
         }
+        mysqli_query($con, "update file set count=count+1 where hash_sha256 = $hash");
 
     } else {
         $name_base64 = base64_encode($_SESSION["username"]);
-        mysqli_query($con, "insert into file (hash_sha256,path) values ('$hash','$path')");
+        mysqli_query($con, "insert into file (hash_sha256,path,count) values ('$hash','$path',1)");
         mysqli_query($con, "insert into $name_base64 (hash_sha256,filename) values ('$hash','$name')");
         // 将文件从临时目录移动到保存路径
         move_uploaded_file($tmp_name, $path);

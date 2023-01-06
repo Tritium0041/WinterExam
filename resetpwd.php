@@ -17,7 +17,7 @@ if (isset($_SESSION["isLogin"]) && $_SESSION["isLogin"] == true) {
         if ($_POST["new1"] == $_POST["new2"]) {
             $newpwd_sha = hash("sha256", $_POST["new1"]);
             mysqli_query($con, "update user set pwd_sha256 = '$newpwd_sha' where username_base64 = '$username_base64'");
-            echo "修改成功！";
+            echo "修改成功！<br /><a href=\"index.html\">回到首页</a><br />";
         } else {
             echo "新密码输入不匹配！";
         }

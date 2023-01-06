@@ -38,3 +38,8 @@ session_start();
         echo "<h1>你没有登录！</h1>
         <hr />";
     }
+    ?>
+    <br /><a href="index.html">回到首页</a><br />
+</body>
+
+</html>

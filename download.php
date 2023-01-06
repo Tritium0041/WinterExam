@@ -2,7 +2,7 @@
 session_start();
 include("connect.php");
 if (!isset($_SESSION["isLogin"])) {
-    echo "未经授权";
+    echo "未经授权<br /><a href=\"index.html\">回到首页</a><br />";
     exit();
 }
 error_log(0);
@@ -23,6 +23,6 @@ if ($result->num_rows > 0) {
     exit();
 
 } else {
-    echo "hash不合法或不存在";
+    echo "hash不合法或不存在 <br /><a href=\"index.html\">回到首页</a><br />";
 
 }

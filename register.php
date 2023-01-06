@@ -25,7 +25,7 @@ if ($rows) { //0 false 1 true
     $q = "insert into user(username_base64,pwd_sha256) values ('$name','$password')"; //向数据库插入表单传来的值的sql
     $reslut = mysqli_query($con, $q); //执行sql
     mysqli_query($con, "create table `$name` (`file_id` INT auto_increment not null primary key,`hash_sha256` char(64) not null,`filename` varchar(255) not null);");
-    echo "注册成功"; //成功输出注册成功
+    echo "注册成功    <br /><a href=\"index.html\">回到首页</a><br />"; //成功输出注册成功
 }
 
 
