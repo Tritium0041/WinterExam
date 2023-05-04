@@ -1,3 +1,25 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登陆错误</title>
+    <link rel="shortcut icon" href="./imgs/icon.png" type="image/x-icon">  
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+    html{
+    background: linear-gradient(to left top,rgb(232, 236, 238),rgb(39, 180, 236));
+    height: 100vh;
+    }
+
+    h2{
+    color:rgb(250, 72, 72);
+    font-size: 2vw;
+    text-align: center;
+    height: 10vw;
+    line-height: 10vw;
+    }
+    </style>
+</head>
 <?PHP
 session_start();
 header("Content-Type: text/html; charset=utf8");
@@ -22,7 +44,7 @@ if ($name && $password) { //如果用户名和密码都不为空
         header("refresh:0;url=welcome.html"); //如果成功跳转至welcome.html页面
         exit;
     } else {
-        echo "用户名或密码错误";
+        echo "<h1>用户名或密码错误</h1>";
         echo "
                     <script>
                             setTimeout(function(){window.location.href='login.html';},1000);
@@ -33,7 +55,7 @@ if ($name && $password) { //如果用户名和密码都不为空
 
 
 } else { //如果用户名或密码有空
-    echo "表单填写不完整";
+    echo "<h1>表单填写不完整</h1>";
     echo "
                       <script>
                             setTimeout(function(){window.location.href='login.html';},1000);

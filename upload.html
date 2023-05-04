@@ -1,7 +1,40 @@
+
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>上传文件</title>
+  <link rel="shortcut icon" href="./imgs/icon.png" type="image/x-icon">  
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/upload.css">
+</head>
+<body>
+  
+
+  <form action="upload.php" method="post" enctype="multipart/form-data">
+      <div class="main">
+        <div class="center">
+          <img src="./imgs/upload.png" alt="">
+          <div class="filemain">
+            <div class="filewrapper">
+              选择文件
+              <input type="file" name="file" class="file">
+            </div>
+            <input type="submit" value="上传" class="upload" > 
+          </div>
+          <a href="index.html">回到首页</a>
+        </div>
+    </div>
+  </form>
+
+</body>
+</html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
-  <title>File Manager</title>
+  <title></title>
 </head>
 <body>
   <h1>File Upload</h1>
@@ -12,4 +45,4 @@
   </form>
   <br/><a href="index.html">回到首页</a><br/>
 </body>
-</html>
+</html> -->

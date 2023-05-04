@@ -1,3 +1,19 @@
+<head>
+    <style>
+    html{
+    background: linear-gradient(to left top,rgb(232, 236, 238),rgb(39, 180, 236));
+    height: 100vh;
+    }
+    h1{
+    color: white;
+    font-size: 2vw;
+    text-align: center;
+    height: 10vw;
+    line-height: 10vw;
+    }
+
+    </style>
+</head>
 <?php
 session_start();
 // error_reporting(0);
@@ -16,7 +32,7 @@ if (isset($_SESSION["isLogin"]) && $_SESSION["isLogin"] == true && isset($_FILES
     $result = mysqli_query($con, $sql);
     $rows = mysqli_num_rows($result); //返回一个数值
     if ($rows) { //0 false 1 true
-        echo "上传成功！重复";
+        echo "<h1>上传成功！重复</h1>";
         $name_base64 = base64_encode($_SESSION["username"]);
         $result1 = mysqli_query($con, "select * from $name_base64 where hash_sha256 = '$hash' and filename = '$name'");
         $rows1 = mysqli_num_rows($result); //返回一个数值
@@ -31,10 +47,10 @@ if (isset($_SESSION["isLogin"]) && $_SESSION["isLogin"] == true && isset($_FILES
         mysqli_query($con, "insert into $name_base64 (hash_sha256,filename) values ('$hash','$name')");
         // 将文件从临时目录移动到保存路径
         move_uploaded_file($tmp_name, $path);
-        echo "上传成功！非重复";
+        echo "<h1>上传成功！非重复</h1>";
     }
 } else {
-    echo "未登录或未经授权！";
+    echo "<h1>未登录或未经授权！</h1>";
 
 }
 
