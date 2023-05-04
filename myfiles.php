@@ -57,7 +57,6 @@ session_start();
     .titlemain{
         color: white;
         height: 3vw;
-        width: 10vw;
        line-height: 3vw;
        margin-left: 1vw;
     }
