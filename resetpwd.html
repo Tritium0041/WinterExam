@@ -1,4 +1,42 @@
 <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>修改密码</title>
+        <link rel="shortcut icon" href="./imgs/icon.png" type="image/x-icon">  
+        <link rel="stylesheet" href="css/reset.css">
+         <link rel="stylesheet" href="css/resetpwd.css">
+    </head>
+    <body>
+        <!-- <main>
+            <form name="login" action="login.php" method="post">
+                <p>用户名<input type=text name="name"></p>
+                <p>密 码<input type=password name="password"></p>
+                <p><input type="submit" name="submit" value="登录"></p>
+            </form>
+            <br/><a href="index.html">回到首页</a><br/>
+        </main> -->
+        <main>
+            <img src="./imgs/icon.png" class="logo">
+            <form action="resetpwd.php" method="post" enctype="multipart/form-data">
+                <div class="userlist">
+                    <input type=text name="oldpassword" placeholder="请输入原密码">
+                </div>
+                <div class="userlist">
+                    <input type=password name="new1" placeholder="请输入新密码">
+                </div>
+                <div class="userlist">
+                  <input type=password name="new2" placeholder="确认密码">
+                </div>
+             
+                <input type="submit" name="submit" value="提交" class="login">
+            </form>
+        </main>
+    </body>
+</html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
   <title>Reset password</title>
@@ -15,4 +53,4 @@
   </form>
   <br/><a href="index.html">回到首页</a><br/>
 </body>
-</html>
+</html> -->

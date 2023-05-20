@@ -1,18 +1,13 @@
-<?php
-session_start();
-?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的文件</title>
-    <link rel="shortcut icon" href="./imgs/icon.png" type="image/x-icon">  
     <link rel="stylesheet" href="css/reset.css">
+    <title>Document</title>
     <style>
-   html{
+    html{
         background: linear-gradient(to left top,rgb(232, 236, 238),rgb(39, 180, 236));
         height: 100vh;
     } 
@@ -57,6 +52,7 @@ session_start();
     .titlemain{
         color: white;
         height: 3vw;
+        width: 10vw;
        line-height: 3vw;
        margin-left: 1vw;
     }
@@ -84,39 +80,14 @@ session_start();
     }
     </style>
 </head>
-
 <body>
-    <h1>文件管理</h1>
-
-    <?php
-    include("connect.php");
-    if (isset($_SESSION["isLogin"]) && $_SESSION["isLogin"] == true) {
-        $username_base64 = base64_encode($_SESSION["username"]);
-        $sql = "select * from $username_base64";
-        $result = mysqli_query($con, $sql); //执行sql
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                echo "<div class=\"title\">
-                <img src=\"./imgs/files.png\">   <div class=\"titlemain\">文件名：" . $row["filename"] . "</div>
-                </div>
-                <div class=\"act\">
-                <a href=\"download.php?hash=" . $row["hash_sha256"] . "&user=" . $username_base64 . "&filename=" . $row["filename"] . "\">下载文件</a>
-                <a href=\"delete.php?hash=" . $row["hash_sha256"] . "&user=" . $username_base64 . "\" class=\"delete\">删除文件</a>
-                </div>";
-            }
-
-        } else {
-            echo "<h2>你还没有上传文件</h2>";
-
-        }
-
-
-
-    } else {
-        echo "<h2>你没有登录</h2>";
-    }
-    ?>
-    <br /><a href="index.html" class="home">回到首页</a><br />
+    <div class="title">
+      <img src="./imgs/flies2.png">   <div class="titlemain">文件名：</div>
+    </div>
+    <div class="act">
+        <a href="" >下载文件</a>
+        <a href="" class="delete">删除文件</a>
+    </div>
+ 
 </body>
-
 </html>

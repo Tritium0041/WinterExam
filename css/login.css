@@ -1,0 +1,56 @@
+html{
+    background: linear-gradient(to left top,rgb(232, 236, 238),rgb(39, 180, 236));
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    height: 35vw;
+    width: 25vw;
+    background-color: white;
+}
+
+input{
+    display: block;
+    width: 18vw;
+    height: 3vw;
+    font-size: 1vw;
+    border-bottom: 2px solid #000;
+    box-sizing: border-box;
+}
+.logo{
+    width: 4vw;
+    height: 4vw;
+    display: block;
+    margin: auto;
+    padding-top: 3vw;
+}
+.userlist{
+    display: flex;
+    width: 20.5vw;
+    margin:3vw auto;
+    align-items: center;
+    justify-content: space-between;
+}
+.userlist img{
+    height: 2vw;
+    width: 2vw;
+    display: block;
+    /* border: 1px solid rgb(118, 118, 118); */
+}
+
+.login{
+    font-size: 1vw;
+    height: 3vw;
+    width: 10vw;
+    margin: auto;
+    background-color: white;
+    border: 0.01vw solid rgb(128, 128, 128);
+    border-radius: 5vw;
+}
+.login:hover{
+    background-color: rgb(39, 180, 236);
+    border:0.01vw rgb(39, 180, 236) solid;
+    color: white
+};
